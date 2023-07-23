@@ -1,24 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import FuncComp from './Components/FuncComp';
+import ClassComp from './Components/ClassComp';
+import ClassProp from './Components/ClassProps';
+import PropFunc from './Components/FuncProps';
+import ChildProps from './Components/ChildProps';
+import StateClass from './Components/StateClass';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <FuncComp/>
+      <ClassComp/>
+      <PropFunc name="functional prop"/>
+      <ClassProp name="class prop"/>
+      <ChildProps>Child Property</ChildProps>
+      <StateClass/>
+    </>
   );
 }
 
